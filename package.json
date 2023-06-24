@@ -1,0 +1,43 @@
+{
+  "name": "lan-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "LanVega",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.19",
+    "@chakra-ui/react": "^2.6.0",
+    "@chakra-ui/theme-tools": "^2.0.16",
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
+    "@react-three/drei": "^9.71.0",
+    "@react-three/fiber": "^8.13.0",
+    "dotenv": "^16.3.1",
+    "firebase": "^9.22.2",
+    "framer-motion": "^10.12.16",
+    "i18next": "^22.4.15",
+    "i18next-http-backend": "^2.2.0",
+    "next-i18next": "^13.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.2.2",
+    "react-icons": "^4.9.0",
+    "react-use": "^17.4.0",
+    "three": "^0.153.0",
+    "typewriter-effect": "^2.19.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "copy-webpack-plugin": "^11.0.0",
+    "eslint-config-next": "^13.3.2",
+    "next": "^13.4.7",
+    "postcss": "^8.4.23"
+  }
+}
