@@ -29,8 +29,8 @@ const WorkGridItem = ({ children, id, title, thumbnail }) => {
     },
   };
 
-  const width = useBreakpointValue({ base: "300px", md: "300px" });
-  const height = useBreakpointValue({ base: "150px", md: "200px" });
+  const width = useBreakpointValue({ base: "250px", md: "300px" });
+  const height = useBreakpointValue({ base: "125px", md: "200px" });
 
   return (
     <motion.div whileHover="hover" initial="initial" variants={variants}>

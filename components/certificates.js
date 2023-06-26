@@ -66,7 +66,7 @@ const Certificates = () => {
           {t("works.certificates")}
         </Heading>
         <Link href="/certificate">
-          <Button width={135} height={38} colorScheme={"teal"}>
+          <Button width={100} height={38} colorScheme={"teal"}>
             {t("skills.seeMore")}
           </Button>
         </Link>
