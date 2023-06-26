@@ -8,6 +8,7 @@ import {
   Flex,
   Link,
   Button,
+  useBreakpointValue
 } from "@chakra-ui/react";
 import Section from "../components/section";
 import { WorkGridItem } from "../components/grid-item";
@@ -82,7 +83,8 @@ const Work = () => {
           {t("works.projects")}
         </Heading>
         <Link href="/works" mb={2}>
-          <Button colorScheme={"teal"}>{t("skills.seeMore")}</Button>
+          <Button colorScheme={"teal"} width={100}
+          height={38}>{t("skills.seeMore")}</Button>
         </Link>
       </Flex>
 

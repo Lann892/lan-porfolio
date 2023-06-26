@@ -22,7 +22,7 @@ const Skills = () => {
     <Container
       pt={{
         base: 0,
-        md: 14,
+        md: 10,
       }}>
       <Heading
         as="h3"
@@ -39,7 +39,10 @@ const Skills = () => {
       </Heading>
       <Grid
         templateColumns={`repeat(${columnCount}, 1fr)`}
-        gap={2}
+        gap={{
+          base: 0,
+          md: 4,
+        }}
         justifyItems="center">
         {languages.map((language) => (
           <Box
@@ -76,8 +79,11 @@ const Skills = () => {
       </Heading>
       <Grid
         templateColumns={`repeat(${columnCount}, 1fr)`}
-        gap={2}
-        justifyItems="center">
+        justifyItems="center"
+        gap={{
+          base: 0,
+          md: 4,
+        }}>
         {technologies.map((technology) => (
           <Box
             key={technology.name}

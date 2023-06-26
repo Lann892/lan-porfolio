@@ -101,7 +101,9 @@ const Works = () => {
           {t("works.projects")}
         </Heading>
         <Link href="/" mb={2}>
-          <Button colorScheme={"teal"}>{t("home")}</Button>
+          <Button width={135} height={38} colorScheme={"teal"}>
+            {t("home")}
+          </Button>
         </Link>
       </Flex>
 

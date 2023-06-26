@@ -1,11 +1,11 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { Decal, OrbitControls, Preload, useTexture } from "@react-three/drei";
 import { useBreakpointValue } from "@chakra-ui/react";
 
-const Ball = (props) => {
-  const [decal] = useTexture([props.imgUrl.src]);
-  const scale = useBreakpointValue({ base: 2.5, md: 2 });
+const Ball = ({ imgUrl }) => {
+  const [decal] = useTexture([imgUrl.src]);
+  const scale = useBreakpointValue({ base: 2.3, md: 2 });
 
   return (
     <>
@@ -27,16 +27,29 @@ const Ball = (props) => {
 };
 
 const BallCanvas = ({ icon }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000); // Simulate a delay for loading the model and textures
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <Canvas
       frameloop="demand"
       dpr={[1, 2]}
       gl={{ preserveDrawingBuffer: true }}>
       <Suspense fallback={null}>
-        <OrbitControls enableZoom={false} />
-        <Ball imgUrl={icon} />
+        {!isLoading && (
+          <>
+            <OrbitControls enableZoom={false} />
+            <Ball imgUrl={icon} />
+          </>
+        )}
       </Suspense>
-
       <Preload all />
     </Canvas>
   );

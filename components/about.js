@@ -19,6 +19,10 @@ const About = () => {
 
   const iconHoverColor = useColorModeValue("#000", "#fff");
   const iconSize = useBreakpointValue({ base: 42, md: 56 });
+  const fontSize = useBreakpointValue({
+    base: 14,
+    md: 16,
+  });
 
   const cv =
     i18n.language === "es"
@@ -65,12 +69,13 @@ const About = () => {
       <Box
         borderRadius="lg"
         bg={useColorModeValue("whiteAlpha.500", "whiteAlpha.200")}
-        p={3}
+        p={2.5}
         mb={6}
         align="center"
         maxW="3xl"
         mx="auto"
         mt={{ base: 4, md: 6 }}
+        fontSize={fontSize}
         boxShadow="md">
         <Typewriter
           options={{

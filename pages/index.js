@@ -42,7 +42,7 @@ const Page = () => {
         <Section
           sx={{
             display: "flex",
-            alignItems: "flex-start",
+            alignItems: "center",
             justifyContent: "center",
           }}
           as="section"
@@ -81,6 +81,7 @@ const Page = () => {
           </Container>
         </Section>
       </Container>
+
       <ScrollToTopButton />
     </Layout>
   );
